@@ -1,0 +1,21 @@
+<%include _header%>
+<h1>Armamento</h1>
+
+<% armas.forEach((arma)=>{%>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <a href="/arma/<%= arma.descripcion %>"><%= arma.descripcion%></a>
+        </div>
+        <% if(arma.categoria){%>
+        <div class="panel-body">
+            <%= arma.categoria%>
+            <br>
+            <%= arma.fuerza%>
+            <br>
+            <%= arma.municiones%>
+            <br>
+        </div>
+        <%}%>
+    </div>
+    <%})%>
+<% include _footer%>
